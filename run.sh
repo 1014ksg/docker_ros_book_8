@@ -6,10 +6,10 @@ docker run --rm \
     --env CLIENT_IP=192.168.1.239 \
     --env MASTER_IP=192.168.1.239 \
     -e DISPLAY=$DISPLAY \
-    --name catkin_make \
+    --name ros_book_08 \
     -v $HOME/.Xauthority:/root/.Xauthority \
     -v "$(pwd)/catkin_ws:/home/catkin_ws" \
-    catkin_make:latest
+    ros_book_08:latest
     #--user=$USER \
     #--env="DISPLAY" \
     #--volume="/etc/group:/etc/group:ro" \

@@ -40,5 +40,11 @@ RUN apt-get update && apt-get install -y \
 ENV CLIENT_IP 192.168.1.221
 ENV MASTER_IP 192.168.1.200
 
+##############################################################################
+##                            simulator gazobo                              ##
+##############################################################################
+RUN apt-get update && apt-get install -y \
+    ros-kinetic-kobuki-gazebo
+
 RUN echo 'export ROS_IP=${CLIENT_IP}' >> ~/.bashrc && \
     echo 'export ROS_MASTER_URI=http://${MASTER_IP}:11311' >> ~/.bashrc
